@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reverse A string</title>
+</head>
+  <body>
+    <div id="app">
+        <h1>Reverse A string</h1>
+        <p>Write a function that takes an string, and reverse it's characters. <br>
+        Example: hello should return olleh.
+        <small>Check console for answer</small>
+        </p>
+    </div>
+
+
+    <script type="text/JavaScript">
+        function reverseStr(str){
+          var array = str.split("").reverse().join("");
+          console.log(array);
+        }
+
+        reverseStr("hello");
+
+    </script>
+  </body>
+</html>
