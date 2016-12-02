@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Check for palindrome</title>
+</head>
+<body>
+
+  <h3>What is a palindrome?<br>
+    It's a word that is spelt the same both backward and forward. Eg. Racecar
+  </h3>
+
+  <p>Write a function that return true if a word is a palindrome </p>
+
+
+  <script type="text/JavaScript">
+
+  //Basic solution without rigious checking
+      function palindrome(str){
+          if(str.length <= 1){
+            return true;
+          }else if (str[0] === str.slice(-1)){
+            return palindrome(str.slice(1, -1));
+          }else{
+            return false;
+
+      }
+
+    }
+
+
+    //Solution 2 with regular expressions
+
+    function palindromReg(str){
+      str = str.toLowerCase().replace(/[\W_1]/g, "");
+
+      if(str = str.split("").reverse().join("")){
+        return true;
+      }else{
+        return false;
+      }
+
+
+    }
+
+      palindrome("racecar");
+      palindromReg("racecar");
+
+  </script>
+</body>
+</html>
