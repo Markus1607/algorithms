@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Longest Word In a Sentence</title>
+</head>
+<body>
+  <h3>Find the longest word in a given sentence</h3>
+  <p>Write an algoritm to find the length of the longest word in a given sentence</p>
+
+
+  <script type="text/JavaScript">
+
+    var biggest = 0;
+    function longestWordLength(str){
+      str = str.toLowerCase().split(" ");
+      str.forEach(function(word){
+        if(word.length > biggest){
+          biggest = word.length;
+        }
+      })
+      console.log(biggest);
+    };
+
+      longestWordLength("I am a little teapot standing on a table")
+  </script>
+</body>
+</html>
