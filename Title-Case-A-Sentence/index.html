@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Title Case a Sentence</title>
+</head>
+  <body>
+      <h3>
+        Capitalize the first letter of Each word in a sentence
+      </h3>
+      <small>Check console for answer</small>
+      <script type="text/JavaScript">
+
+
+          function titleCase(str){
+            str = str.split(" ") .map(function(word){
+              return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+            }).join(" ");
+
+            console.log(str);
+          }
+
+          titleCase("this is the best burger in the world")
+
+      </script>
+  </body>
+</html>
