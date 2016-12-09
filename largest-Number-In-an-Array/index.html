@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Longest Word in an Array</title>
+</head>
+<body>
+    <h3>
+      Find the largest number in a given set of arrays and return an array of each of the biggest number.
+    </h3>
+
+    <small>
+      Example: [[7,8,9], [6,3,2], [10,11,12]] should return [9,6,12]
+    </small>
+
+
+
+  <script type="text/JavaScript">
+
+        var biggest = [];
+        var count = 0;
+
+        function largestNumber(arr){
+          arr.forEach(function(subArray){
+            biggest.push(subArray.sort(function(a, b){
+              return b - a;
+            })[0])
+          })
+          return biggest;
+        }
+
+  </script>
+</body>
+</html>
