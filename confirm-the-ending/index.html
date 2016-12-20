@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+
+  <h1>View page source for solution</h1>
+
+  <p>Write a function that take two argument, it should return true if the ending of the first argument is equal to the second argument or even contain letter of the first argument's last word, and should return false if otherwise</p>
+
+
+<p>Example: ARG1: &quot; This is the best in the world &quot; </p>
+<p>ARG2:&quot; world &quot; should return true </p>
+
+
+
+
+
+  <script>
+
+      function confirmEnding(str, target){
+        //first convert it to a lowerCase and replace any non word and underscores with an empty string.
+        str = str.toLowerCase().replace(/\W_/g, "");
+        //slice it based on the target length
+        var startPoint = 0 - target.length;
+        // target === str.slice(-Math.abs(target.length)); 2ND SOLUTION
+        return target === str.slice(startPoint);
+        console.log(str);
+
+      }
+
+
+      console.log(confirmEnding("this is the best day of my life", "life"));
+
+      console.log(confirmEnding("The dog run over the cat", "dog"));
+
+
+      console.log(confirmEnding("Daniel Shiffman is awesome", "awesome"));
+
+  </script>
+
+</body>
