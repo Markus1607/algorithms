@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+    <h2>Repeat a given string, num times, and return an empty string if num is a negative number. </h2>
+</body>
+<script>
+
+// SOLUTION ONE USING IF/ELSE STATEMENT
+  function repeatStringNumTimes(str, num){
+
+      if(num < 0 ){
+        str = "";
+      }else{
+        return str.repeat(num);
+
+      }
+  }
+
+  //SOLUTION 2 USING ITENARY OPERATION
+
+    function repeatStringNumTimes2(str, num){
+        return num > 0 ? str.repeat(num) : "";
+    }
+
+
+
+  console.log(repeatStringNumTimes2("Abacus", 100));
+</script>
+</html>
