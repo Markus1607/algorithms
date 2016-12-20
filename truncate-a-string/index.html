@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+
+  <h2>
+    Truncate a string(1st Argument) if it is longer than the given maximum string length( second argument).
+  </h2>
+
+  <h2>
+    Return the truncated string with a 	&lsquo; ... &rsquo; ending, Note that inserting the three dots to the end will add to the string length.
+  </h2>
+
+  <h2>
+    However, if the given maximum string length, num is less than or equal to 3, then the addition of the three dots soes not add to the string length in the determining the truncated string.
+  </h2>
+
+</body>
+  <script>
+      function truncateString(str, num){
+        if (str.length <= num){
+          return str;
+        }
+        else if ( num <= 3 ){
+          return str.slice(0, num ) + "...";
+        }else{
+          return str.slice(0, (num - 3)) + "...";
+        }
+      }
+
+      console.log(truncateString("This is a lovely weather, would like to take a walk in it",  20));
+  </script>
+</html>
