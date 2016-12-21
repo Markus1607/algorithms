@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+
+  <h2> Write a function that spilts an array( first argument) into groups the length into groups of the size(second argument) and returns them as a two dimensional array.
+</h2>
+
+
+</body>
+<script>
+  function chunkyArrayGroups(arr, size){
+      var finalArray = [];
+      var counter = 0;
+      while(counter < arr.length){
+        finalArray.push(arr.slice(counter, counter+size));
+        counter += size;
+      }
+    return finalArray;
+  }
+
+  console.log(chunkyArrayGroups(["a", "b", "c", "d", "e", "f"], 2));
+</script>
+
+</html>
