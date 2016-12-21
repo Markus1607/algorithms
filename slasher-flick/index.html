@@ -1,0 +1,53 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <h2>
+    Return the remaining elements of an array after choping off n elements from the head.
+  </h2>
+  <h2>
+    The head means the beginning of the array or the zeroth index
+  </h2>
+
+</body>
+<script>
+
+    //solution one
+    function slasherFlick(arr, howMany){
+
+      if(howMany >= arr.length){
+        return [];
+      }else{
+        for (var i=1; i <= howMany; i++ ){
+          arr.shift();
+        }
+
+        return arr;
+      }
+    }
+
+
+
+//Solution 2
+    function slasherFlick2(arr, howMany){
+
+
+          //the splice method mutates the array and return the items that were removed. 
+         arr.splice(0, howMany);
+
+         return arr;
+
+      }
+
+
+    console.log(slasherFlick2([1,2,3], 2))
+
+</script>
+
+
+</html>
