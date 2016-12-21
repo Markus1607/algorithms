@@ -1,0 +1,42 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <h2>
+    Return true if the string in the first element if the array contains all the letter of the string in the second element of the array
+  </h2>
+
+  <h2>
+    For Example, ["hello, "hello"], should return true because all of the letters in the second string are present in the first ignoring case;
+  </h2>
+
+  <h2>
+    Lastly, ["Alien", "line"], should return true because all of the letters in the line are present in "Alien"
+  </h2>
+
+</body>
+<script>
+
+      //index of returns the first occurance of its compared value
+
+      //if not present it return -1
+  function mutation(arr){
+      var target = arr[0].toLowerCase();
+      var word = arr[1].toLowerCase();
+
+      for(var i=0; i< word.length; i++){
+        if(target.indexOf(word[i]) < 0){
+          return false
+        }
+      }
+      return true;
+  }
+
+  console.log(mutation(["hello", "hello"]));
+</script>
+</html>

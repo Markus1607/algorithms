@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <h2>
+    Remove all the falsy from the array.
+    Falsy values in JavaScript are false, null, 0, 2, undefined and NaN;
+  </h2>
+
+</body>
+<script>
+  function falsyBouncer(arr){
+    //  The trick to this challenge is that JavaScript by default ignores falsy values if not specified. 
+      return arr.filter(function(item){
+        return item;
+      })
+
+  }
+
+  console.log(falsyBouncer([7, "ate", "", false, 9]));
+</script>
+</html>
