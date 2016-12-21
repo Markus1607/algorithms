@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <h2>
+    You will be provided with an initial array(first Argument) in the destroyer function followed by one or more arguments.
+  </h2>
+  <h2>
+    Remove allthe elements from the initial array that are of the same value as these arguments
+  </h2>
+{
+</body>
+<script>
+
+  /* This logic here is sort of converting the arguments object into an array-like. Under the hood its setting the this keyword of the slice (which works with a normal array by default, to the arguments object). But here it  coverts the arguments object into an array using its index.
+
+  Refer to http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work  for more info.
+
+  */
+
+  function destroyer(arr){
+
+    var args = Array.prototype.slice.call(arguments, 1);
+    return arr.filter(function(item){
+      return !args.includes(item);
+    })
+
+
+  }
+  console.log(destroyer([1,2,3,1,2,3], 2,3,4,5));
+</script>
+</html>
