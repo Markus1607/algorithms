@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <h2> Return the lowest position at which a value(second argument) should be inserted into an array (first argument) once it has been sorted.</h2>
+
+</body>
+  <script>
+    function getIndexToIns(arr, num){
+      arr.push(num);
+      return arr.sort(function(a, b){
+        return a - b;
+      }).indexOf(num);
+
+    }
+    console.log(getIndexToIns([68,2,7,4, 40, 60], 50));
+
+  </script>
+</html>
