@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+    <h2>
+      We'll pass you an array of two numbers. Return the  sum of those two number and all the numbers between them. </br>.
+      The lowest number will not always come first. </br>
+    </h2>
+</body>
+<script>
+      var max, min;
+      var newArr = [];
+
+      function getMaxOfArray(numArray) {
+        return Math.max.apply(null, numArray);
+      }
+      function getMinOfArray(numArray) {
+        return Math.min.apply(null, numArray);
+      }
+
+      function sumAll(arr){
+        arr.sort(function(a, b){
+          return a - b;
+        });
+
+        max = getMaxOfArray(arr);
+        min = getMinOfArray(arr);
+
+        for(var i = min; i <= max; i++){
+        newArr.push(i);
+        };
+
+        return newArr.reduce(function(a, b){
+          return a + b;
+        });
+
+      }
+
+
+      console.log(sumAll([5, 20]));
+
+
+</script>
+</html>
