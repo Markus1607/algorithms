@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Search And Replace</title>
+</head>
+<body>
+  <p>Perform a search and replace on the sentence using the arguments provided and return the new sentence </p>
+
+  <p>First argument is the sentence to perform the search and replace on</p>
+
+  <p>Second argument is the word that you will be replacing(before) </p>
+
+  <p>
+    Third argument is the word that will be replacing the second argument with(after)
+  </p>
+
+</body>
+<script>
+      function myReplace(str, before, after){
+          if(before.chartAt(0) === before.chartAt(0).toUpperCase()) {
+            after = after.chartAt(0).toUpperCase() + after.slice(1);
+          }
+        return str.replace(before, after)
+      }
+
+
+  console.log(myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped"));
+
+</script>
+</html>
