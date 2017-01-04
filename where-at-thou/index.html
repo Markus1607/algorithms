@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+</head>
+<body>
+  <p>Make a function that looks through an array of objects[first argument], and returns an array of all the objects that have a matching property and value pair of the source[second argument]</p>
+
+</body>
+<script>
+
+
+//=======SOLUTION ONE =============//
+  function whereThouAt(collection, src){
+
+      var srcKeys = Object.keys(src);
+
+      return collection.filter(function(obj){
+        return srcKeys.every(function(key){
+          return obj.hasOwnProperty(key) && obj[key] === src[key];
+        })
+      })
+
+
+
+
+  }
+
+
+  //==================================
+  //Solution two
+  //====================================
+
+  function where(collection, source) {
+      var arr = [];
+
+      for (var item in collection) {
+        if (collection[item].last === source.last) {
+          arr.push(collection[item]);
+        }
+      }
+
+      return arr;
+}
+
+//console.log(where([{ first: 'Romeo', last: 'Montague' }, { first: 'Mercutio', last: null }, { first: 'Tybalt', last: 'Capulet' }], { last: 'Capulet' }));
+
+
+  console.log(whereThouAt([{first: "Romeo", last: "Montague"}, {first: "Mercutlio", last: null}, {first: "Tybalt", last: "Capulet"}], {last: "Capulet"}));
+
+</script>
+</html>
